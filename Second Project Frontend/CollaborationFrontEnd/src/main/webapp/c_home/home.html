@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body {
+    
+    background-image:url('./Images/bright.jpg') ;
+    background-repeat:no-repeat;
+   background-size:cover;
+}
+
+</style>
+</head>
+<body>
+<div ng-controller="UserController as uctrl">
+<div ng-controller="HomeController as ctrl">
+<div class="row">
+<div ng-show="currentUser.user_id">
+<div class="nav navbar-nav navbar-left" style="color:white;"><img width="100 px" height="50 px" alt="userimage" src="./Images/{{currentUser.name}}.jpg" /><b>Welcome:{{currentUser.name}}
+you logged in as:{{currentUser.role}}</b>
+</div>
+<div class="nav navbar-nav navbar-right" ng-show="currentUser.user_id" >
+
+<li ><a ng-click="uctrl.usermyprofile()" style="color:white;" >My Profile</a></li><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<p class="h3 text-uppercase" style="color:#00FFFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the site for collaborating with the people. Where the students and Alumni can communicate and get the updates on jobs and events etc.
+<ul style="color:#FFFF00;" class="h4 text-success"><li>we can create blogs and we can post a comment for the blog.we can apply for job based on the eligibilty.</li>
+<li>we can send friend request to other people.we can chit-chat with our friends.</li>
+<li> we can keep our chat privately.we can celebrate lot of events and post the events.</li> </ul></p>
+	<div class="row">
+		<div class="col-md-4">
+			<a href="#/create_blog"> <img class="img-thumbnail"  alt="Bootstrap Image Preview1" src="Images/blog1.jpg" /></a>
+		</div>
+		<div class="col-md-4">
+		<a  href="#/search_job">	<img class="img img-thumbnail"  alt="Bootstrap Image Preview" src="Images/searchjob.jpg" /></a>
+		</div>
+		<div class="col-md-4">
+		<a href="#/cr_event">	<img class="img img-thumbnail"  alt="Bootstrap Image Preview" src="Images/events.jpg" /></a>
+		</div>
+	</div>
+	<br/><br/>
+	<div class="row">
+		<div class="col-md-6">
+		<a href="#/search_friend">	<img class="img img-thumbnail" alt="Bootstrap Image Preview" src="Images/frind.jpg" /></a>
+		</div>
+		<div class="col-md-6">
+		<a href="#/view_friend">	<img class="img img-thumbnail" alt="Bootstrap Image Preview" src="Images/chitchat.jpg" /></a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

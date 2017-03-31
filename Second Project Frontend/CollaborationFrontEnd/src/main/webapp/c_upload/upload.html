@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div ng-controller ="UserController as ctrl">
+<form name="form" ng-submit="ctrl.image()" role="form">
+ <div class="row">
+<div class="form-group col-md-8">
+<label class="col-md-2 control-lable"for="image">Image</label>
+<div class="col-md-7">
+<input type="file" ng-model="ctrl.user.image" id="image" class="username form-control input-sm" placeholder="Upload Your image" required />
+</div>
+</div>
+</div>
+
+	<input type="submit" value="ADD Image" class="btn btn-success">
+ </div>
+ 
+    <div class="container">
+    <div class="row">
+<div id="image" div class="table-responsive">
+      <table class="table  table-hover table-striped
+      table-bordered">
+      <thead>
+      <center>
+        <tr class="warning">
+        <th>Image</th>
+        </tr>
+        <td><img src="resources/image/{user.image}.png" style="width: 100px; height: 150px;"></td>
+          </thead>
+          <tbody>
+           </tbody>
+           </table>
+           </div>
+           </div>
+           </div>
+ 
+ </body>
+</html>

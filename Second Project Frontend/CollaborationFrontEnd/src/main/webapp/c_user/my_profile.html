@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="container" ng-controller="UserController as ctrl">
+<a href="#/Upuser"><button type="button" class="btn btn-warning btn-sm">Upload pic</button></a>
+<!-- <button type="button" ng-click="ctrl.usermyprofile()"   class="btn btn-warning btn-sm">View Ur Profile</button>
+ &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ --><!-- <button type="button" ng-click="getform = !getform" class="btn btn-warning btn-sm">Edit Ur Profile</button> -->
+<div class="form-group">
+<br>
+
+<!-- NAME:<label>{{ctrl.user.name}}</label><br>
+EMAIL:<label>{{ctrl.user.email}}</label><br>
+PASSWORD:<label>{{ctrl.user.password}}</label><br>
+ROLE:<label>{{ctrl.user.role}}</label><br>
+MOBILE NO:<label>{{ctrl.user. mobile_no}}</label><br>
+ADDRESS:<label>{{ctrl.user.address}}</label><br>
+GENDER:<label>{{ctrl.user.gender}}</label><br>
+STATUS:<label>{{ctrl.user.status}}</label><br> -->
+
+
+NAME:<label>{{currentUser.name}}</label><br>
+EMAIL:<label>{{currentUser.email}}</label><br>
+PASSWORD:<label>{{currentUser.password}}</label><br>
+ROLE:<label>{{currentUser.role}}</label><br>
+MOBILE NO:<label>{{currentUser.mobile_no}}</label><br>
+ADDRESS:<label>{{currentUser.address}}</label><br>
+GENDER:<label>{{currentUser.gender}}</label><br> 
+STATUS:<label>{{currentUser.status}}</label><br> 
+                 
+</div>
+
+
+
+
+<div class="formcontainer">
+<form ng-submit="ctrl.userupdate(currentUser.user_id)" name="myForm" class="form-horizontal" ng-show="getform">
+<br>
+<label>Edit your profile...</label>
+
+<br>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="name">Name</label>
+<div class="col-md-7">
+<input type="text" ng-model="currentUser.name" id="name" class="username form-control input-sm" placeholder="Enter your Name" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="mail">Email</label>
+<div class="col-md-7">
+<input type="text" ng-model="currentUser.email" id="email" class="email form-control input-sm" placeholder="Enter your Email" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="password">Password</label>
+<div class="col-md-7">
+<input type="text" ng-mod="currentUser.password" id="password" class="username form-control input-sm" placeholder="Enter your password" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="mob_no">Mobile No:</label>
+<div class="col-md-7">
+<input type="text" ng-model="currentUser.mobile_no" id="mob_no" class="mobile_no form-control input-sm" placeholder="Enter your contact number" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="password">Role</label>
+<div class="col-md-7">
+<input type="text" ng-model="currentUser.role" id="dob" class="role form-control input-sm" placeholder="Enter your role" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="password">Gender</label>
+<div class="col-md-7">
+<input type="text" ng-model="currentUser.gender" id="gender" class="username form-control input-sm" placeholder="Male or Female" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="address">Address</label>
+<div class="col-md-7">
+<input type="text" ng-model="currentUser.address" id="address" class="username form-control input-sm" placeholder="Enter Address" required />
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable"for="status">Status</label>
+<div class="col-md-7">
+<input type="text" ng-model="currentUser.status" id="address" class="username form-control input-sm" placeholder="Enter Status" required />
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="form-actions floatRight">
+<!-- <input type="submit" value="Update Ur Profile" class="btn btn-primary btn-sm"> -->
+<button type="button"  class="btn btn-warning btn-sm">Update Ur Profile</button>
+</div>
+</div>
+</form>
+</div></div>
+
+</body>
+</html>

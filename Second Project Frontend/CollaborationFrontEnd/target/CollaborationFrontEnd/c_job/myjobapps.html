@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table class="table" ng-controller="JobController as ad">
+<tr>
+<td>
+Job_APP_ID
+</td>
+<td>
+APP_DATE
+</td>
+<td>
+JOB_ID
+</td>
+<td>
+STATUS
+</td>
+</tr>
+<tr ng-repeat="job_app in ad.job_applications">
+<td>{{job_app.job_app_id}}</td>
+<td>{{job_app.app_date}}</td>
+<td>{{job_app.job_id}}</td>
+<td>{{job_app.status}}</td>
+</tr>
+</table>
+</body>
+</html>

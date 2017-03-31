@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <div align="center" ng-controller="UserController as ctrl">
+        <form method="post" action="http://localhost:8080/collobrationchatt/userimage" enctype="multipart/form-data">
+            <table border="0">
+                <tr>
+               
+                    <td>Profile pic:</td>
+                    <td><input type="file" name="uploadFile" /></td>
+                </tr>
+             
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Upload" /></td>
+                </tr>
+                
+                
+            </table>
+        </form>
+    </div>
+    
+</body>
+</html>

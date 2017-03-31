@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container" ng-controller="JobController as ctrl">
+<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+
+		<div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >JOB_TITLE:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.job_title" type="text" class="form-control "  placeholder="Enter job_title" required>
+      </div>
+    </div>
+		<div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >Domain:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.domain" type="text" class="form-control "  placeholder="Enter domain" required>
+      </div>
+    </div>
+    <div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >Qualification:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.qualification" type="text" class="form-control "  placeholder="Enter qualification" required>
+      </div>
+    </div>
+    <div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >Experience:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.experience" type="text" class="form-control "  placeholder="Enter experience" required>
+      </div>
+    </div>
+			
+			<div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >Location:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.location" type="text" class="form-control "  placeholder="Enter location" required>
+      </div>
+    </div>
+    <div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >Vacancy:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.vacancy" type="text" class="form-control "  placeholder="Enter vacancy" required>
+      </div>
+    </div>
+    <div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >Interview_date:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.interview_date" type="text" class="form-control "  placeholder="Enter interview_date" required>
+      </div>
+    </div>
+		
+		<div class="form-group g1">
+      <label class="control-label c1 col-sm-2" >Salary:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.job.salary" type="text" class="form-control "  placeholder="Enter salary" required>
+      </div>
+    </div>
+		
+	
+
+	<button  class="btn btn-primary" type="submit">Create</button>
+   
+    </form>
+    </div>
+    
+</body>
+</html>

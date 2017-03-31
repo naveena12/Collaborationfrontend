@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+body {
+    
+    background-image:url('D:/dmdw/CollobrationFrontEnd/src/main/webapp/Images/bgd2.jpg') ;
+    background-repeat:no-repeat;
+   background-size:cover
+}
+label
+{
+color:white;
+}
+
+</style>
+<body>
+
+
+  <div class="container" ng-controller="BlogController as ctrl">
+    
+<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+<div class="form-group">
+      <label class="control-label  col-sm-2" >Blog_title:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.blog.blog_title" type="text" class="form-control"  placeholder="Enter blog_title" required>
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" >Description:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.blog.description" type="text" class="form-control"  placeholder="Enter description" required>
+      </div>
+    </div>
+   <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-primary" type="submit" >Submit</button>
+        <button class="btn btn-success" ng-click="ctrl.reset()" type="submit" >Reset</button>
+      </div>
+    </div>
+    </form>
+     
+     </div>
+     </body>
+     </html>

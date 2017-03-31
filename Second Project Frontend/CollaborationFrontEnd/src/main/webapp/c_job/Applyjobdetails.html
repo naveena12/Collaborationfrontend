@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+body {
+    
+    background-image:url('./Images/sjob.jpg') ;
+    background-repeat:no-repeat;
+   background-size:cover;
+}
+label
+{
+color:white;
+}
+.glyphicon-list
+{
+font-size:15px;
+}
+</style>
+<body>
+
+<nav aria-label="buttons">
+    <ul class="pager">
+    <li ><a style="background-color:rgb(204, 255, 153);" href="#/view_applied_jobs"><span class="glyphicon glyphicon-list"> </span>&nbsp;&nbsp;&nbsp;My Job Applications</a></li>
+    <li class="btn btn-warning"><a href="#/"><span class="glyphicon glyphicon-home"> </span></a></li>
+    </ul>
+    </nav>
+
+<div class="container" ng-controller="JobController as jd">
+<div class="row">
+<div class="col-md-5">
+<form role="form">
+<div class="input-group">
+<input type="text" placeholder="searchjob" ng-model="searchjob" class="form-control" >
+<div class="input-group-btn">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div ng-repeat="job in jd.jobs|filter:searchjob">
+
+<b>JOB_TITLE:</b>
+{{job.job_title}}
+<br/>
+
+<b>DOMAIN:</b>
+{{job.domain}}
+<br/>
+
+<b>QUALIFICATION:</b>
+{{job.qualification}}
+<br/>
+
+<b>EXPERIENCE:</b>
+{{job.experience}}
+<br/>
+
+<b>LOCATION:</b>
+{{job.location}}
+<br/>
+
+<b>VACANCY:</b>
+{{job.vacancy}}
+<br/>
+<b>INTERVIEW_DATE:</b>
+{{job.interview_date}}
+<br/>
+<b>SALARY:</b>
+{{job.salary}}
+<br/>
+<div class="col-md-2"></div>
+<div class="col-md-10"><button ng-click="jd.submit1(job.job_id)"  class="btn btn-primary" type="submit">APPLY</button>
+
+</div>
+</div>
+<br/><br/>
+
+</div>
+
+</body>
+</html>

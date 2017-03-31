@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <div align="center" ng-controller="EventController as ctrl" >
+        <form method="post"  enctype="multipart/form-data">
+       
+        
+               <select class="form-control" ng-model="cc">
+                    <option ng-repeat="e in ctrl.events" value="{{e.e_name}}">{{e.e_name}}</option>
+                </select>
+                {{cc}}
+                    <table border="0">
+                    <tr>
+                    <td>Event Name</td>
+                    <td>Upload Event Image</td>
+                    </tr>
+                    <tr ng-repeat="e in ctrl.events"><td> {{e.e_name}}</td>
+                
+                    <td><input type="file" ng-model="eimg" name="uploadFile" /></td>
+               
+                    <td colspan="2" align="center"><input type="submit" ng-click="http://localhost:8080/collobrationchatt/doUpload/e.e_name" value="Upload" /></td>
+                </tr>
+                
+                
+            </table>
+        </form>
+        <img src="D:/New folder (3)/CollaborationFrontEnd/src/main/webapp/resources/images/">
+    </div> -->
+    
+    
+    <div align="center">
+        <form method="post" action="http://localhost:8080/collobrationchatt/eventimage" enctype="multipart/form-data">
+            <table border="0">
+                <tr>
+                    <td>Profile pic:</td>
+                    <td><input type="file" name="uploadFile" /></td>
+                </tr>
+             
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Upload" /></td>
+                </tr>
+                
+                
+            </table>
+        </form>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

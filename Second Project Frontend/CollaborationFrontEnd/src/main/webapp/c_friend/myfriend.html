@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="FriendController as ac ">
+<table>
+<tr ng-repeat="friend in ac.acceptedFriends">
+<td>
+{{friend.friend_id}}
+</td>
+<td><a href="#/chat">CHAT</a></td>
+</tr>
+
+</table>
+</div>
+</body>
+</html>

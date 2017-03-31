@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<link href="resources/css/home.css" rel="stylesheet"> 
+</head>
+<body>
+
+	<div ng-controller="UserController as ctrl">
+	<div ng-controller="HomeController as Hctrl">
+
+		<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand"><img style="width: 100px; height:50px;"
+						src="resources/images/img.jpg" alt="Logo"><i></a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#/">Home</a></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">Blogs<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/create_blog">Add New Blogs</a></li>
+							<li><a href="#/list_blog">Show List of Blogs</a></li>
+						</ul></li>
+					
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">Job Opportunities<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/view_job_details">View Job Details</a></li>
+							<li><a href="#/search_job">Search Job</a></li>
+						   <li><a href="#/view_applied_jobs">View Applied Job Details</a></li>
+						</ul></li>
+
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">Friends<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/search_friend">Search Friend</a></li>
+							<li><a href="#/view_friend">View Friend</a></li>
+							<li><a href="#/myfriend">My friends</a></li>
+						</ul></li>
+
+					<li><a href="#/event">Events</a></li>
+
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">Chat<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/chat_forum">Group Chat</a></li>
+							
+						</ul></li>
+						<div ng-show="currentUser.role=='admin'">
+					<li><a href="#/adminhome">Admin</a></li>
+					</div>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+				
+					<div ng-hide="currentUser.role=='admin' || currentUser.role=='alumni' || currentUser.role=='student' || currentUser.role=='employee'">
+						<li><a href="#/register"><span
+								class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+						<li><a href="#/login"><span
+								class="glyphicon glyphicon-log-in"></span>Login</a></li>
+					   </div>
+					   
+					<div ng-show="currentUser.role=='admin' || currentUser.role=='alumni' || currentUser.role=='student' || currentUser.role=='employee'">
+						<li><a ng-click="ctrl.logout()"><span
+								class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+	                         </div>				
+				</ul>
+			</div>
+		</nav> -->
+		
+		<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/create_blog">Post your Blog</a></li>
+            <li><a href="#/list_blog">List of Blogs</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Job<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/search_job">Job openings</a></li>
+            <li><a href="#/view_applied_jobs">My job applications</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Friends <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/search_friend">Send friend request</a></li>
+            <li><a href="#/view_friend">My friends</a></li>
+            <li><a href="#/add_friend">New requests</a></li>
+            <li><a href="#/chat">Chat with a friend</a></li>
+          </ul>
+        </li>
+        <li><a href="#/event">Events</a></li>
+        <div ng-show="currentUser.role=='Admin'">
+        <li><a href="#/Admin">Admin</a></li>
+        </div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a ng-click="ctrl.logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+		
+	</div></div>
+
+	<div class="jumbotron">
+		<hr color="blue" width="100%" size="30">
+		<div class="container">
+		<img src="Images/{{currentUser.name}}.jpg" />
+		
+		{{currentUser.name}}
+			<div ng-view></div>
+		</div>
+	</div>
+
+	<!-- <script src="resources/js/bootstrap.min.js"></script>
+    
+    <script src="resources/script/angular.js"></script>
+    <script src="resources/script/angular-route.js"></script> -->
+
+	<script src="resources/js/angular-cookies.js"></script>
+
+	<script src="resources/js/sockjs.js"></script>
+	<script src="resources/js/stomp.js"></script>
+
+	<script src="app.js"></script>
+
+	<script src="c_home/HomeController.js"></script>
+	<script src="c_user/UserController.js"></script>
+	<script src="c_user/UserService.js"></script>
+	<script src="c_blog/BlogController.js"></script>
+	<script src="c_blog/BlogService.js"></script>
+
+	<script src="c_job/JobController.js"></script>
+	<script src="c_job/JobService.js"></script>
+<script src="c_event/EventController.js"></script>
+	<script src="c_event/Eventservice.js"></script>
+
+	<script src="c_chat/ChatController.js"></script>
+	<script src="c_chat/ChatService.js"></script>
+
+	<script src="c_chat_forum/ChatForumController.js"></script>
+	<script src="c_chat_forum/ChatForumService.js"></script>
+
+	<script src="c_friend/FriendController.js"></script>
+	<script src="c_friend/FriendService.js"></script>
+
+	<script src="c_upload/FileUploadController.js"></script>
+	<script src="resources/js/sockjs.min.js"></script>
+	<script src="resources/js/stomp.min.js"></script>
+
+</body>
+</html>

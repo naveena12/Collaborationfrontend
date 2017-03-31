@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- <html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="#/userslist">Manage users</a>
+<a href="#/listofjobs">Manage Jobs</a>
+</body>
+</html> -->
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<a href="#/userslist">Manage users</a>
+<a href="#/listofjobs">Manage Jobs</a>
+
+<div class="container">
+  <h2>Dynamic Tabs</h2>
+  
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#user">ManageUsers</a></li>
+    <li><a data-toggle="tab" href="#cjob">Post a Job</a></li>
+    <li><a data-toggle="tab" href="#ejob">Edit Job details</a></li>
+    <li><a data-toggle="tab" href="#djob">Remove Job details</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="user" class="tab-pane fade in active">
+      <h3>Users</h3>
+     <table>
+     <tr><td>List of users</td></tr>
+     </table>
+    </div>
+    <div id="cjob" class="tab-pane fade">
+      <h3>Create job form</h3>
+    <form><button type="submit">Post Job</button></form>
+    </div>
+    <div id="ejob" class="tab-pane fade">
+      <h3>Edit job</h3>
+      <form><button type="submit">Edit Job</button></form>
+    </div>
+    <div id="djob" class="tab-pane fade">
+      <h3>Delete Job</h3>
+     <form><button type="submit">Delete Job</button></form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

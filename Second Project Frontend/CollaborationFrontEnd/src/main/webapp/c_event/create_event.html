@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<nav aria-label="buttons">
+    <ul class="pager">
+  
+    <li class="btn btn-warning"><a href="#/"><span class="glyphicon glyphicon-home"> </span></a></li>
+    </ul>
+    </nav>
+ <div class="container" ng-controller="EventController as ctrl">
+    
+<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal" >
+<div class="form-group">
+      <label class="control-label  col-sm-2" >EVENT_NAME:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.event.e_name" type="text" class="form-control"  placeholder="Enter e_name" required>
+      </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" >EVENT_VENUE:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.event.e_venue" type="text" class="form-control"  placeholder="Enter e_venue" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2" >DESCRIPTION:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.event.e_description" type="text" class="form-control"  placeholder="Enter e_description" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >EVENT_DATETIME:</label>
+      <div class="col-sm-10">
+        <input ng-model="ctrl.event.e_datetime" type="text" class="form-control"  placeholder="Enter date in(yyyy-mm-dd) format only" required>
+      </div>
+    </div>
+    
+     
+    
+     <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-primary" type="submit" >Create Event</button>
+        <button class="btn btn-success" ng-click="ctrl.reset()" type="submit" >Reset</button>
+      </div>
+      </div>
+      
+</form>
+</div>
+</body>
+</html>
+

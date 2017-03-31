@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table   class="table table-hover" ng-controller="BlogController as bd" class="table">
+<tr>
+<td>BLOG_TITLE  
+</td>
+ 
+<td>BLOG_DATE
+</td>
+
+<td>WRITTEN BY
+</td>
+<td>USER_ID
+</td>
+</tr>
+<tr ng-repeat="blog in bd.blogs"><a href="#">
+<td>{{blog.blog_title}}</td>
+<td>{{blog.blog_Datetime}}</td>
+<td>{{blog.description}}</td>
+<td>{{blog.user_id}}</td>
+</a>
+</tr>
+ </table>
+</body>
+</html>

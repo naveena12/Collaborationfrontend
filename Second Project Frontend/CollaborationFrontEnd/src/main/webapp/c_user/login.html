@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Log'n Load</title>
+  
+  
+</head>
+
+<body>
+<div class="container" ng-controller="UserController as ctrl">
+<div ng-show='ctrl.user.errormessage!=""'>
+<div class="alert alert-danger">
+error:{{ctrl.user.errormessage}}
+</div>
+</div>
+
+
+  <div class="login">
+  <header class="header">
+    <span class="text">LOGIN</span>
+    <span class="loader"></span>
+  </header>
+  
+  <form name="form" ng-submit="ctrl.login()"  class="form">  
+    <input ng-model="ctrl.user.user_id" class="input" type="text", placeholder="Username">
+    <input  ng-model="ctrl.user.password" class="input" type="password" placeholder="Password">
+    <button class="btn1" type="submit">Login</button>
+    <button class ="resetbtn" type= "reset">Reset it
+</button>
+  </form>
+</div>
+</div>
+
+ 
+
+</body>
+</html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

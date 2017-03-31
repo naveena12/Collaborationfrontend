@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<div class="container" ng-controller="FriendController as ctrl">
+<div class="row">
+<div class="col-md-5">
+<form role="form">
+<div class="input-group">
+<input  type="text" placeholder="Search friend"  ng-model="searchfriend" class="form-control" />
+<div class="input-group-btn">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<br><br><br>
+			<div ng-repeat="u in ctrl.users|filter:searchfriend"  >
+				<div ng-hide="currentUser.user_id==u.user_id">
+					 <b>USER NAME:</b>{{u.name}}
+					<br/>
+				<b>EMAIL:</b>{{u.email}}
+				<br/>
+				<b>MOBILE_NO:</b>{{u.mobile_no}}
+				<br/>
+				<b>ISONLINE:</b>{{u.isOnline}}
+				<br/>
+				<div class="col-md-2"></div>
+				<div class="col-md-10"><button ng-click="ctrl.submit(u.user_id)" class="btn btn-primary" type="submit"> SEND REQUEST </button>
+				</div>
+			</div>
+			</div>
+</div>
+
+
+
+
+</body>
+</html>

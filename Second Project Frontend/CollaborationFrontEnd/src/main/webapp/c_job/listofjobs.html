@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="JobController as ctrl">
+    <table>
+    <thead>
+    <tr>
+    <th>Job title</th>
+    <th>domain</th>
+    <th>qualification</th>
+    <th>experience</th>
+    <th>location</th>
+    <th>vacancy</th>
+    <th>interview_date</th>
+    <th>salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <form>
+    <tr ng-repeat="job in ctrl.jobs">
+    <td>
+    <span ng-show="mode !='edit'">{{job.job_title}}</span>
+    <input ng-show="mode=='edit" ng-model="job.job_title"/>
+    </td>
+    <td>
+    <span ng-show="mode !='edit'">{{job.jobdomain}}</span>
+    <input ng-show="mode=='edit" ng-model="job.jobdomain"/>
+    </td>
+    <td>
+    <span ng-show="mode !='edit'">{{job.jobqualification}}</span>
+    <input ng-show="mode=='edit" ng-model="job.jobqualification"/>
+    </td>
+    <td>
+    <span ng-show="mode !='edit'">{{job.jobexperience}}</span>
+    <input ng-show="mode=='edit" ng-model="job.jobexperience"/>
+    </td>
+    <td>
+    <span ng-show="mode !='edit'">{{job.joblocation}}</span>
+    <input ng-show="mode=='edit" ng-model="job.joblocation"/>
+    </td>
+    <td>
+    <span ng-show="mode !='edit'">{{job.jobvacancy}}</span>
+    <input ng-show="mode=='edit" ng-model="job.jobvacancy"/>
+    </td>
+    <td>
+    <span ng-show="mode !='edit'">{{job.jobinterview_date}}</span>
+    <input ng-show="mode=='edit" ng-model="job.jobinterview_date"/>
+    </td>
+    <td>
+    <span ng-show="mode !='edit'">{{job.jobsalary}}</span>
+    <input ng-show="mode=='edit" ng-model="job.jobsalary"/>
+    
+    </td>
+   
+   <td>
+   <button ng-show="mode !='edit'" ng-click="mode='edit'">Update</button>
+   <button ng-show="mode=='edit'" ng-click="mode=null"><a href="#" ng-click="">Save</a></button>
+    <button type="button" class="close" ng-click="ctrl.editJob(job)">Edit</button>
+     </td>
+      <td>
+     <button type="button" class="close" ng-click="ctrl.updateJob(job)">Update</button>
+     </td>
+    <td><button  class="btn btn-primary" type="submit">Edit job</button></td>
+    <td><button  class="btn btn-primary" type="submit">Delete job</button></td>
+    
+    </tr>
+    </form>
+    </tbody>
+  
+    </table>
+    </div>
+    
+   
+    
+</body>
+</html>

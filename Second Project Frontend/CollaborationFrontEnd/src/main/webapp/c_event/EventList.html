@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="EventController as ec" >
+<div class="row">
+<div class="col-md-4" ng-repeat="event in ec.events" style="font-size:40 px"><b >{{event.e_name}}</b>
+<br/>
+<img width="259 px" height="194 px" alt="eventimage" src="Images/{{event.e_name}}.jpg" />
+</div>
+</div>
+</div>
+</body>
+</html>

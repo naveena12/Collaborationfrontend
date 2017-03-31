@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<div class="container" ng-controller="FriendController as ctrl">
+<form role="form">
+<input  type="text"  ng-model="searchfriend" class="form-control" /><br><br><br>
+			<table ng-repeat="u in ctrl.users|filter:searchfriend">
+				<tr>
+					<td>  USER NAME:</td>
+					<td>{{u.name}}</td>
+				</tr>
+				<tr>
+					<td>EMAIL:</td>
+					<td>{{u.email}}</td>
+				</tr>
+				<tr>
+					<td>MOBILE_NO:</td>
+					<td>{{u.mobile_no}}</td>
+				</tr>
+				<tr>
+					<td>ISONLINE</td>
+					<td>{{u.isOnline}}</td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><button ng-click="ctrl.submit(u.user_id)" class="btn btn-primary" type="submit"> SEND REQUEST </button></td>
+				</tr>
+					
+			</table>
+
+
+				
+
+		</form>
+
+</div>
+
+
+
+
+</body>
+</html>
